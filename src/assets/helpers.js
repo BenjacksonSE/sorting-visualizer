@@ -7,4 +7,12 @@ const newRandomArr = (length) => {
     return FileList;
 }
 
-export {newRandomArr};
+const arrOfKeys = async(arr, length) => {
+  let newArr = [];
+  for(let i = 0 ; i < length ; ++i) {
+        newArr.push(Number(arr[i].key));
+    }
+    return newArr;
+}
+
+export {newRandomArr, arrOfKeys};
