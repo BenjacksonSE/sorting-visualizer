@@ -15,4 +15,12 @@ const arrOfKeys = async(arr, length) => {
     return newArr;
 }
 
-export {newRandomArr, arrOfKeys};
+const speedControl = async(speed) => {
+  return new Promise(resolve=>{
+    setTimeout(()=>{
+      resolve();
+    }, 300/speed)
+  })
+}
+
+export {newRandomArr, arrOfKeys, speedControl};
