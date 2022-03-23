@@ -9,7 +9,7 @@ const Sorts = ({props}) => {
   return (
     <div className='sorts'>
       <div className='array'>
-        {props.list.map((elem, index) => (
+        {props.arr.map((elem, index) => (
           <div className={forClassChange(elem.whichClass)} key={index} value={elem.key} style={{height:`${4*elem.key}px`}}/>
         ))}
       </div>
