@@ -12,7 +12,8 @@ export default class Main extends React.Component {
     working: false,
     arr: [],
   }
-  //Navbar controls
+  //INTERFACE CONTROLS ----------------------------------------------------
+  //Handle change of Interface controls
   onChange = (value, selection) => {
     if(selection === "algo" && !this.state.working) {
         this.setState({ algorithm: Number(value) });
@@ -25,10 +26,18 @@ export default class Main extends React.Component {
         this.generateArr();
     }
   };
+
+  //Handle start
+  start = async() => {
+    
+  }
+
+  //SORTS HELPERS AND ANIMATIONS ------------------------------------------
   //Generate new Arr on page load
   componentDidMount(){
     this.generateArr();
   }
+
   //Generate new list based on arr length
   generateArr = (value=0) => {
     if((this.state.arr.length !== this.state.arrLeng && !this.state.working) || Number(value)===1){
