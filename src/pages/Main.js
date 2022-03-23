@@ -1,7 +1,8 @@
 import React from 'react'
 import Interface from '../components/Interface/Interface';
 import Sorts from '../components/Sorts';
-import { newRandomArr } from '../assets/helpers';
+import { newRandomArr, arrOfKeys, speedControl } from '../assets/helpers';
+import { bubbleSort } from '../assets/algorithms/bubblesort';
 
 export default class Main extends React.Component {
   //Setting default state for each new main instance
@@ -44,6 +45,14 @@ export default class Main extends React.Component {
       let newArr = newRandomArr(this.state.arrLeng);
       this.setState({ arr: newArr });
     }
+  }
+
+  //Access algorithm for next step **
+  getSteps = async(AlgoName) => {
+    let steps = [];
+    let newArr = await arrOfKeys(this.state.arr, this.state.arrLeng);
+    steps = await bubbleSort(newArr, newArr.length);
+    return steps
   }
 
 
