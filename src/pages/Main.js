@@ -2,7 +2,7 @@ import React from 'react'
 import Interface from '../components/Interface/Interface';
 import Sorts from '../components/Sorts';
 import { newRandomArr, arrOfKeys, speedControl } from '../assets/helpers';
-import { bubbleSort } from '../assets/algorithms/bubblesort';
+import { BubbleSort } from '../assets/algorithms/Bubblesort';
 
 export default class Main extends React.Component {
   //Setting default state for each new main instance
@@ -51,11 +51,32 @@ export default class Main extends React.Component {
   getSteps = async(AlgoName) => {
     let steps = [];
     let newArr = await arrOfKeys(this.state.arr, this.state.arrLeng);
-    steps = await bubbleSort(newArr, newArr.length);
+    steps = await BubbleSort(newArr, newArr.length);
     return steps
   }
 
+  //Shows current step
+  showSteps = async(steps) => {
+    if(steps.legth===0){
+      return;
+    }
+    if(steps[0].length===4){
+      return;
+    }
+    else{
+      await this.swappingStep(steps);
+    }
+  }
 
+  //Swaping
+  // swapping = async(Steps) => {
+  //   while(Steps.length>0) {
+  //     let currStep = Steps[0];
+  //     if(currStep.length!==3){
+  //       await this
+  //     }
+  //   }
+  // }
 
   render() { 
     return (

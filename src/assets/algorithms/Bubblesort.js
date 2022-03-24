@@ -1,4 +1,4 @@
-export const bubbleSort = async(array, length) => {
+export const BubbleSort = async(array, length) => {
     const swapElems = async (array, index1, index2) => {
       let temp = array[index1];
       array[index1] = array[index2];
