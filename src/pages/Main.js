@@ -94,7 +94,13 @@ export default class Main extends React.Component {
     let temp = arr[indexArr[0]].key;
     arr[indexArr[0]].key = arr[indexArr[1]].key;
     arr[indexArr[1]].key = temp;
-    await this.updateState(arr);
+    await this.updateArrState(arr);
+  }
+
+  //Updtate the arr state and timeout based on chosen speed
+  updateArrState = async(newArr) => {
+    this.setState({arr: newArr});
+    await speedControl(this.state.speed);
   }
 
   render() { 
