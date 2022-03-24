@@ -97,10 +97,19 @@ export default class Main extends React.Component {
     await this.updateArrState(arr);
   }
 
-  //Updtate the arr state and timeout based on chosen speed
+  //Update the arr state and timeout based on chosen speed
   updateArrState = async(newArr) => {
     this.setState({arr: newArr});
     await speedControl(this.state.speed);
+  }
+
+  //Update className logic of element to show change happening
+  classLogic = async(indexArr, whichClass) => {
+    let arr = [...this.state.arr];
+    for(let i = 0; i < indexArr.length; i++){
+      arr[indexArr[i]].whichClass = whichClass;
+    }
+    await this.updateArrState(arr);
   }
 
   render() { 
