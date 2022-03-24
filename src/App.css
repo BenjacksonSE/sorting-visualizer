@@ -32,7 +32,7 @@ footer {
   min-height: 80vh;
   align-items: flex-start;
 }
-.cell {
+.elem {
   flex: 0.5;
   margin: 1px;
   display: flex;
@@ -42,12 +42,12 @@ footer {
   background-color: #D6D6D6;
   transition: all .4s ease-in;
 }
-.cell.done {
+.cell.working {
   background-color: #9CEC5B;
   border-color: #9CEC5B;
   transition: all .4s ease-out;
 }
-.cell.current {
+.cell.sorted {
   border-color: #6184D8;
   background-color: #6184D8;
   transition: all .4s ease-out;
