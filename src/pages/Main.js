@@ -30,7 +30,9 @@ export default class Main extends React.Component {
 
   //Handle start
   start = async() => {
-    
+    let steps = await this.getSteps(this.state.algo);
+    await this.showSteps(steps);
+    await this.finished();
   }
 
   //SORTS HELPERS AND ANIMATIONS ------------------------------------------
@@ -110,6 +112,15 @@ export default class Main extends React.Component {
       arr[indexArr[i]].whichClass = whichClass;
     }
     await this.updateArrState(arr);
+  }
+
+  //
+  finished = async() => {
+    let indexArr = [];
+    for(let i = 0; i < this.state.arrLeng; i++){
+      indexArr.push(i);
+    }
+    await this.classLogic(indexArr, 2)
   }
 
   render() { 
