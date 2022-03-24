@@ -69,14 +69,29 @@ export default class Main extends React.Component {
   }
 
   //Swaping
-  // swapping = async(Steps) => {
-  //   while(Steps.length>0) {
-  //     let currStep = Steps[0];
-  //     if(currStep.length!==3){
-  //       await this
-  //     }
-  //   }
-  // }
+  swappingStep = async(Steps) => {
+    while(Steps.length>0) {
+      let currStep = Steps[0];
+      if(currStep.length!==3){
+        await this.showSteps(Steps);
+        return;
+      }
+      else{
+        let indexArr = [currStep[0], currStep[1]];
+        await this.classLogic(indexArr, 1);
+        if(currStep[2]===1){
+          await this.updateArr(indexArr);
+        }
+        await this.classLogic(indexArr, 0);
+      }
+      Steps.shift();
+    }
+  }
+
+  //Update the main Arr
+  updateArr = async(indexArr) => {
+    
+  }
 
   render() { 
     return (
