@@ -1,5 +1,3 @@
-// insertion sort returns container with 2 indexes and boolean
-// describing to swap or not
 export const insertionSort = async(array, length) => {
     let moves = [];
 

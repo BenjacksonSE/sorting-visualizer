@@ -1,13 +1,7 @@
-// heap sort returns container with 2 indexes and boolean
-// describing to swap or not
+
 export const heapSort = async(array, length) => {
     let moves = [];
-    const swapElems = async (array, index1, index2) => {
-      let temp = array[index1];
-      array[index1] = array[index2];
-      array[index2] = temp;
-    };
-    
+
     for(let index = Math.ceil(length/2)-1 ; index >= 0 ; --index) {
         await heapify(moves, array, length, index);
     }
@@ -17,6 +11,12 @@ export const heapSort = async(array, length) => {
         await heapify(moves, array, index, 0);
     }
     return moves;
+};
+
+const swapElems = async (array, index1, index2) => {
+  let temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
 };
 
 
