@@ -90,7 +90,11 @@ export default class Main extends React.Component {
 
   //Update the main Arr
   updateArr = async(indexArr) => {
-    
+    let arr = [...this.state.arr];
+    let temp = arr[indexArr[0]].key;
+    arr[indexArr[0]].key = arr[indexArr[1]].key;
+    arr[indexArr[1]].key = temp;
+    await this.updateState(arr);
   }
 
   render() { 
