@@ -36,5 +36,5 @@ export const merge = async(array, moves, start, mid, end) => {
     for(let i = start ; i <= end ; ++i) {
         array[i] = sortedArray[i-start];
         moves.push([i, array[i], 2, indexes]);
-    }
+    };
 };
