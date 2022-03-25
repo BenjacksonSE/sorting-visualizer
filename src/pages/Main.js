@@ -192,17 +192,18 @@ class Main extends React.Component {
     //All that work to return this little thing
     render() { 
         return (
-            <React.Fragment>
+            <>
+                <Sorts 
+                    array = {this.state.array}
+                />
                 <Interface
                     start = {this.start}
                     responsive = {this.responsive}
                     newArray = {this.newArray}
                     onChange = {this.onChange}
                 />
-                <Sorts 
-                    array = {this.state.array}
-                />
-            </React.Fragment>
+                
+            </>
         );
     }
 }

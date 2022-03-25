@@ -1,29 +1,28 @@
 import React from 'react';
 
 class Sorts extends React.Component {
+    getClassName = (classNum) => {
+        if(classNum === 0) return 'cell';
+        else if(classNum === 1) return 'cell current';
+        return 'cell done';
+    };
+
     render() { 
         return (
             <div className="frame">
                 <div className="array">
-                    {this.props.array.map((element, index) => (
+                    {this.props.array.map((elem, index) => (
                         <div
-                            className = {this.getClass(element.classType)}
+                            className = {this.getClassName(elem.classType)}
                             key = {index}
-                            style = {{height : `${4*element.key}px`}}
-                            value = {element.key}>
+                            style = {{height : `${4*elem.key}px`}}
+                            value = {elem.key}>
                         </div>
                     ))}
                 </div>
             </div>
         );
-    }
-
-    // using css classes to change color of elements
-    getClass = (value) => {
-        if(value === 0) return 'cell';
-        else if(value === 1) return 'cell current';
-        return 'cell done';
-    };
+    }  
 }
  
 export default Sorts;
