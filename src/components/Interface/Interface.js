@@ -29,7 +29,8 @@ class Interface extends React.Component {
     render() {
         return (
             <div className="interface" id="interface">
-                <button id="random" onClick = {() => this.props.newArray(1)}>Random</button>
+                <button id="random" onClick = {() => this.props.newArray(1)}>New Array</button>
+                <button id="start" onClick = {() => this.props.start()}>Start</button>
                 <Algorithms 
                     onChange = {this.props.onChange}
                     algorithms = {this.state.algorithms}
@@ -42,7 +43,6 @@ class Interface extends React.Component {
                     onChange = {this.props.onChange}
                     speeds = {this.state.speeds}
                 />
-                <button id="start" onClick = {() => this.props.start()}>Start</button>
                 <a 
                     className="icon" 
                     onClick = {(e) => this.handleClick(e)}

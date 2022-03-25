@@ -193,16 +193,15 @@ class Main extends React.Component {
     render() { 
         return (
             <>
-                <Sorts 
-                    array = {this.state.array}
-                />
                 <Interface
                     start = {this.start}
                     responsive = {this.responsive}
                     newArray = {this.newArray}
                     onChange = {this.onChange}
                 />
-                
+                <Sorts 
+                    array = {this.state.array}
+                />
             </>
         );
     }
