@@ -38,7 +38,7 @@ html, body {
 }
 /* FRAME ENDS */
 
-/* NAVBAR STARTS */
+/* Interface STARTS */
 .interface {
   top: 0;
   overflow: hidden;
@@ -75,6 +75,16 @@ html, body {
 }
 #random {
   margin-top: 5px;
+}
+.logo {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline;
+  margin-right: 50px;
 }
 
 button {
@@ -124,6 +134,8 @@ button:focus {
   .interface a.icon {
       float: right;
       display: block;
+      color: black;
+      font-size: 24px;;
   }
   .interface.responsive {
       position: relative;
@@ -140,6 +152,9 @@ button:focus {
   }
   .interface.responsive button {
     display: inline;
+  }
+  .logo{
+    display: none;
   }
 }
 /* interface ENDS */

@@ -29,6 +29,7 @@ class Interface extends React.Component {
     render() {
         return (
             <div className="interface" id="interface">
+                <label className='logo'>Algorithm Visualizer</label>
                 <button id="random" onClick = {() => this.props.newArray(1)}>New Array</button>
                 <button id="start" onClick = {() => this.props.start()}>Start</button>
                 <Algorithms 
