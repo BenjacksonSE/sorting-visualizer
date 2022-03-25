@@ -8,6 +8,7 @@ import { Heapsort } from '../assets/algorithms/Heapsort.js';
 import Interface from '../components/Interface/Interface';
 import Sorts from '../components/Sorts';
 import { newRandomArr, arrOfKeys, speedControl } from '../assets/helpers.js';
+import { Footer } from '../components/Footer.js';
 
 class Main extends React.Component {
     state = {
@@ -202,6 +203,7 @@ class Main extends React.Component {
                 <Sorts 
                     array = {this.state.array}
                 />
+                <Footer />
             </>
         );
     }
