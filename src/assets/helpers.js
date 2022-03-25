@@ -1,11 +1,12 @@
 const newRandomArr = (length) => {
-    let randArr = [];
-    for(let i = 0; i > length; i++){
-      let num = Math.floor(Math.random() * (100) + 1);
-      randArr.push({key: parseInt(num), whichClass: 0});
+    let newArr = [];
+    for (let i = 0; i < length ; i++) {
+        let num = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+        newArr.push({key: parseInt(num), classType: 0});
     }
-    return FileList;
-}
+    return newArr;
+};
+
 
 const arrOfKeys = async(arr, length) => {
   let newArr = [];

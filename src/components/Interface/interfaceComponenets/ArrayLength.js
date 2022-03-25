@@ -1,12 +1,12 @@
 import React from 'react';
 
 // Size list component
-const Size = (props) => {
+const arrayLength = (props) => {
     return (
         <span className="options">
             <select 
-                name="size" id="menu" className="size-menu"
-                onChange = {(e) => props.onChange(e.target.value, "size")}>
+                name="arrayLength" id="menu" className="size-menu"
+                onChange = {(e) => props.onChange(e.target.value, "arrayLength")}>
                 {props.lengths.map(element => (
                     <option 
                         key = {10*element}
@@ -19,4 +19,4 @@ const Size = (props) => {
     );
 }
  
-export default Size;
+export default arrayLength;

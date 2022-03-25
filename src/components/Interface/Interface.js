@@ -1,40 +1,40 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa'
+import Algorithms from './interfaceComponenets/Algorithms';
+import ArrayLength from './interfaceComponenets/ArrayLength';
+import Speed from './interfaceComponenets/Speed';
 
-import Algorithms from './InterfaceSelections/Algorithms';
-import Size from './InterfaceSelections/Size';
-import Speed from './InterfaceSelections/Speed';
-
-// Interface Component
+// Navbar Component
 class Interface extends React.Component {
     state = {
-        Algorithms: [
-        { value: 1, type: 'Bubble Sort' },
-        { value: 2, type: 'Selection Sort' },
-        { value: 3, type: 'Insertion Sort' },
-        { value: 4, type: 'Merge Sort' },
-        { value: 5, type: 'Quick Sort' },
-        { value: 6, type: 'Heap Sort' },
-		    ],
-        lengths: [10, 20, 50, 100],
-        speeds: [1.00, 2.00, 4.00]
+        algorithms: [
+			{ value: 1, type: 'Bubble Sort' },
+			{ value: 2, type: 'Selection Sort' },
+			{ value: 3, type: 'Insertion Sort' },
+			{ value: 4, type: 'Merge Sort' },
+			{ value: 5, type: 'Quick Sort' },
+            { value: 6, type: 'Heap Sort' },
+		],
+		lengths: [10, 20, 30, 40, 50],
+		speeds: [1.00, 2.00, 4.00]
     };
 
-    // prevent the default link behaviour for interface
+    // prevent the default link behaviour for navbar
     // hide/display button
     handleClick = (e) => {
         e.preventDefault();
-        this.props.response();
+        this.props.responsive();
     }
 
     render() {
         return (
             <div className="interface" id="interface">
-                <button id="random" onClick = {() => this.props.newList(1)}>Random</button>
+                <button id="random" onClick = {() => this.props.newArray(1)}>Random</button>
                 <Algorithms 
                     onChange = {this.props.onChange}
-                    algorithms = {this.state.Algorithms}
+                    algorithms = {this.state.algorithms}
                 />
-                <Size 
+                <ArrayLength 
                     onChange = {this.props.onChange}
                     lengths = {this.state.lengths}
                 />
@@ -47,7 +47,7 @@ class Interface extends React.Component {
                     className="icon" 
                     onClick = {(e) => this.handleClick(e)}
                     href = "/">
-                    <i className="fa fa-bars"></i>
+                    <FaBars/>
                 </a>
             </div>
         );

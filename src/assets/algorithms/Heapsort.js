@@ -1,5 +1,5 @@
 
-export const heapSort = async(array, length) => {
+export const Heapsort = async(array, length) => {
     let moves = [];
 
     for(let index = Math.ceil(length/2)-1 ; index >= 0 ; --index) {

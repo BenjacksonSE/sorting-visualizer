@@ -32,7 +32,7 @@ footer {
   min-height: 80vh;
   align-items: flex-start;
 }
-.elem {
+.cell {
   flex: 0.5;
   margin: 1px;
   display: flex;
@@ -42,20 +42,19 @@ footer {
   background-color: #D6D6D6;
   transition: all .4s ease-in;
 }
-.cell.working {
+.cell.done {
   background-color: #9CEC5B;
   border-color: #9CEC5B;
   transition: all .4s ease-out;
 }
-.cell.sorted {
+.cell.current {
   border-color: #6184D8;
   background-color: #6184D8;
   transition: all .4s ease-out;
 }
 /* FRAME ENDS */
 
-
-/* interface STARTS */
+/* NAVBAR STARTS */
 .interface {
   top: 0;
   overflow: hidden;
@@ -108,28 +107,28 @@ button:hover {
   background-color: #ccd6f6;
 }
 @media screen and (max-width: 900px) {
-  .interface button, .interface .options {
+  .navbar button, .navbar .options {
       display: none;
   }
-  .interface a.icon {
+  .navbar a.icon {
       float: right;
       display: block;
   }
-  .interface.responsive {
+  .navbar.responsive {
       position: relative;
   }
-  .interface.responsive a.icon {
+  .navbar.responsive a.icon {
       position: absolute;
       right: 0;
       top: 0;
   }
-  .interface.responsive .options {
+  .navbar.responsive .options {
       float: none;
       display: block;
       text-align: center;
   }
-  .interface.responsive button {
+  .navbar.responsive button {
     display: inline;
   }
 }
-/* interface ENDS */
+/* NAVBAR ENDS */

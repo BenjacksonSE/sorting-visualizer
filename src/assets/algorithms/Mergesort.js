@@ -1,5 +1,5 @@
 
-export const mergeSort = async(array, length) => {
+export const Mergesort = async(array, length) => {
     let moves = [];
     await divide(array, moves, 0, length-1);
     return moves;

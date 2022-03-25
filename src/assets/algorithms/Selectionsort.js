@@ -1,4 +1,4 @@
-export const selectionSort = async(array, length) => {
+export const Selectionsort = async(array, length) => {
     let moves = [];
     const swapElems = async (array, index1, index2) => {
       let temp = array[index1];

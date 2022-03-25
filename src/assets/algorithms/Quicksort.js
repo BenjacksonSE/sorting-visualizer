@@ -1,4 +1,4 @@
-export const quickSort = async(array, length) => {
+export const Quicksort = async(array, length) => {
     let moves = [];
     await divider(moves, array, 0, length-1);
     return moves;
